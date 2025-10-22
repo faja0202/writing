@@ -1,0 +1,389 @@
+{
+  "schema_version": "1.0.0",
+  "name": "CPI_email_ruleset_dynamic_single_file",
+  "description": "사용자가 제시한 아이디어(심리학 실험/예능/밈 등)를 실시간 검색으로 보강해 '후킹 → 핵심 인사이트 → 적용 → CTA' 순서의 홍보메일을 자동 생성하는 단일 규칙 파일.",
+  "brand": {
+    "nickname": "스타님",
+    "salutation_format": "{{recipient}} 스타님,",
+    "fallback_recipient": "구독자"
+  },
+
+  "style": {
+    "honorific": true,
+    "emoji": false,
+    "exclamation_soft_limit": 1,
+    "case_rules": {
+      "keep_trademark": ["CPI™ 인성검사"],
+      "units": ["%", "점", "요인"]
+    },
+    "banned_phrases": [
+      "100% 보장",
+      "절대 실패하지 않습니다",
+      "반드시 성공합니다",
+      "무조건",
+      "확실히"
+    ],
+    "preferred_phrases": [
+      "데이터에 근거해",
+      "상황에 따라",
+      "균형 있게",
+      "살펴봅니다",
+      "확인할 수 있습니다"
+    ],
+    "length": {
+      "min_words": 350,
+      "target_words": 550,
+      "max_words": 800
+    },
+    "formatting": {
+      "use_markdown_headings": true,
+      "section_labels": {
+        "hook": "후킹",
+        "insight": "핵심 인사이트",
+        "apply": "적용",
+        "cta": "교육 안내"
+      },
+      "source_inline_citation_style": "출처: {{source_name}}, {{year_month}}"
+    }
+  },
+
+  "sections_order": ["후킹", "핵심 인사이트", "적용", "교육 안내"],
+
+  "semantics": {
+    "must_link_to_cpi": true,
+    "cpi_constructs": [
+      "대인 민감성",
+      "자기관리(자기통제)",
+      "대인관계 성향(7요인)",
+      "조직 적합성(434문항·30요인)",
+      "타당도 척도(사회적 바람직성/긍정왜곡 등)",
+      "경험적 문항 vs 이론적 문항"
+    ],
+    "two_sided_explanation_required": true,
+    "work_examples_required": 2,
+    "work_examples_contexts": ["회의", "면접/채용", "피드백/코칭", "프로젝트 협업", "고객응대"]
+  },
+
+  "bridge_matrix": [
+    {
+      "concept_cluster": "사회적 동조/집단사고/여론 압력/다수의견",
+      "cpi": ["대인 민감성"],
+      "notes": "다수 의견에 흔들림 ↔ 독립 판단의 균형"
+    },
+    {
+      "concept_cluster": "지연된 만족/충동 억제/챌린지/루틴/자기조절",
+      "cpi": ["자기관리(자기통제)"],
+      "notes": "장기 목표 정렬, 에너지/감정 조절"
+    },
+    {
+      "concept_cluster": "이미지 관리/사회적 바람직성/겉모습 vs 진짜 나/가면/멀티 페르소나",
+      "cpi": ["타당도 척도(사회적 바람직성)", "경험적 문항 vs 이론적 문항"],
+      "notes": "정직·일관 응답의 중요성, 편향 교정"
+    },
+    {
+      "concept_cluster": "조직문화/컬처핏/우리 조직과 결/역할/가치관",
+      "cpi": ["조직 적합성(434문항·30요인)"],
+      "notes": "지원자-조직의 적합성, 온보딩/정착"
+    },
+    {
+      "concept_cluster": "관계 갈등/상사·동료 갈등/피드백 스킬/공감-직설",
+      "cpi": ["대인관계 성향(7요인)"],
+      "notes": "협업 문해력, 표현-수용의 균형"
+    }
+  ],
+
+  "fetch": {
+    "enable_web": true,
+    "recency_days": 540,
+    "max_sources": 3,
+    "allowed_domains": [
+      "wikipedia.org",
+      "namu.wiki",
+      "mbc.co.kr",
+      "sbs.co.kr",
+      "tving.com",
+      "tvn.cjenm.com",
+      "youtube.com",
+      "youtu.be",
+      "instagram.com",
+      "x.com"
+    ],
+    "disallowed_content_flags": [
+      "유출",
+      "비공식 녹화",
+      "사생활 침해",
+      "명예훼손 가능성"
+    ],
+    "search_templates": [
+      "밈 {{idea}} 의미",
+      "예능 {{idea}} 장면 해설",
+      "심리학 {{idea}} 사례",
+      "{{idea}} 유래 요약",
+      "{{idea}} best moments",
+      "{{idea}} controversy summary",
+      "한국 예능 {{idea}} 요약",
+      "연예/밈 {{idea}} 출처"
+    ],
+    "summary_fields": ["title", "channel_or_site", "date_ym", "key_points"],
+    "citation_render": "출처: {{channel_or_site}}, {{date_ym}}",
+    "safety_notes": "이미지·영상은 재배포하지 않고 텍스트 요약만 사용. 논란/사건은 사실 확인 가능한 출처만 사용하고 선정적 내용 배제."
+  },
+
+  "cta_sessions": {
+    "2025-03": {
+      "title": "CPI™ 인성검사 전문가 자격교육 - 기본 과정",
+      "dates": "2025년 3월 14일(금)~15일(토), 09:30~17:30",
+      "place": "(오프라인) 어세스타 서울본사, (온라인) Zoom",
+      "price": "35만 원",
+      "audience": [
+        "기업/기관 인사·채용·교육 담당자 및 관리자",
+        "코칭 분야 종사자",
+        "리더십/커리어 컨설턴트"
+      ],
+      "perks": ["교재", "점심식사"],
+      "discount": "동일 조직 2인 이상 10% 할인"
+    },
+    "2025-05": {
+      "title": "CPI™ 인성검사 자격교육",
+      "dates": "2025년 5월 13일(화)~14(수), 09:30–17:30",
+      "place": "(오프라인) 어세스타 서울본사, (온라인) Zoom",
+      "price": "35만 원",
+      "audience": [
+        "기업/기관 인사·채용·교육 담당자 및 관리자",
+        "코칭 분야 종사자",
+        "리더십 및 커리어 컨설턴트"
+      ],
+      "perks": ["교재", "점심식사"],
+      "discount": "동일 조직 2인 이상 10% 할인"
+    },
+    "2025-07": {
+      "title": "CPI™ 인성검사 자격교육",
+      "dates": "2025년 7월 10일(목)~11(금), 09:30–17:30",
+      "place": "(오프라인) 어세스타 서울본사, (온라인) Zoom",
+      "price": "35만 원",
+      "audience": [
+        "기업/기관 인사·채용·교육 담당자 및 관리자",
+        "코칭 분야 종사자",
+        "리더십 및 커리어 컨설턴트"
+      ],
+      "perks": ["교재", "점심식사"],
+      "discount": "동일 조직 2인 이상 10% 할인"
+    },
+    "2025-09": {
+      "title": "CPI™ 인성검사 자격교육",
+      "dates": "2025년 9월 23일(화)~24(수), 09:30–17:30",
+      "place": "(오프라인) 어세스타 서울본사, (온라인) Zoom",
+      "price": "35만 원",
+      "audience": [
+        "기업/기관 인사·채용·교육 담당자 및 관리자",
+        "코칭 분야 종사자",
+        "리더십 및 커리어 컨설턴트"
+      ],
+      "perks": ["교재", "점심식사"],
+      "discount": "동일 조직 2인 이상 10% 할인"
+    },
+    "2025-11": {
+      "title": "CPI™ 인성검사 자격교육",
+      "dates": "2025년 11월 25일(화)~26(수), 09:30–17:30",
+      "place": "(오프라인) 어세스타 서울본사, (온라인) Zoom",
+      "price": "35만 원",
+      "audience": [
+        "기업/기관 인사·채용·교육 담당자 및 관리자",
+        "코칭 분야 종사자",
+        "리더십/커리어 컨설턴트",
+        "상담/교육기관 종사자"
+      ],
+      "perks": ["교재", "점심식사"],
+      "discount": "동일 조직 2인 이상 10% 할인"
+    }
+  },
+
+  "template_text": "{{salutation}}\n\n[{{labels.hook}}]\n{{hook_paragraph}}\n\n[{{labels.insight}}]\n{{insight_paragraph}}\n\n[{{labels.apply}}]\n{{apply_paragraph}}\n\n— {{labels.cta}} —\n{{cta.title}}\n일시: {{cta.dates}}\n장소: {{cta.place}}\n대상: {{cta.audience_joined}}\n비용: {{cta.price}} (혜택: {{cta.perks_joined}} / 할인: {{cta.discount}})",
+
+  "rendering": {
+    "variables": [
+      "recipient",
+      "salutation",
+      "labels.hook",
+      "labels.insight",
+      "labels.apply",
+      "labels.cta",
+      "hook_paragraph",
+      "insight_paragraph",
+      "apply_paragraph",
+      "cta.title",
+      "cta.dates",
+      "cta.place",
+      "cta.audience_joined",
+      "cta.price",
+      "cta.perks_joined",
+      "cta.discount"
+    ],
+    "fallbacks": {
+      "recipient": "구독자",
+      "labels.hook": "후킹",
+      "labels.insight": "핵심 인사이트",
+      "labels.apply": "적용",
+      "labels.cta": "교육 안내"
+    }
+  },
+
+  "merge_policy": {
+    "allow_external_overrides": true,
+    "precedence": ["user_override", "doc_ingest", "ruleset_default"],
+    "override_keys": [
+      "recipient",
+      "cta_key",
+      "tone",
+      "force_linkage",
+      "length",
+      "labels"
+    ],
+    "doc_ingest": {
+      "extractors": [
+        {
+          "name": "cpi_keywords",
+          "patterns": [
+            "대인 민감성",
+            "자기관리",
+            "자기통제",
+            "타당도",
+            "사회적 바람직성",
+            "경험적 문항",
+            "이론적 문항",
+            "조직 적합성",
+            "대인관계",
+            "434문항",
+            "30요인"
+          ]
+        },
+        {
+          "name": "application_phrases",
+          "patterns": [
+            "회의",
+            "면접",
+            "코칭",
+            "피드백",
+            "협업",
+            "갈등",
+            "규칙",
+            "프레임",
+            "역할 분담"
+          ]
+        }
+      ],
+      "max_snippets": 8
+    }
+  },
+
+  "controller": {
+    "inputs": {
+      "idea_free_text": "사용자가 주는 후킹 아이디어(밈/예능/실험/사례 등 한 줄).",
+      "recipient": "선택(없으면 fallback_recipient 사용).",
+      "cta_key": "선택(없으면 cta_sessions에서 최신 키 사용).",
+      "override": "선택(JSON 조각: tone, force_linkage 등).",
+      "uploaded_docs": "선택(DOCX 등 규칙/레퍼런스 문서)."
+    },
+    "pipeline_steps": [
+      "1) 아이디어에서 핵심 키워드 추출",
+      "2) fetch.search_templates로 웹 검색(allowed_domains, recency_days 준수)",
+      "3) 상위 1~3개 결과를 사실 위주로 요약(요약 필드는 fetch.summary_fields 사용)",
+      "4) 요약 키워드를 bridge_matrix 개념에 매핑해 CPI 축 1~2개 선택(또는 override.force_linkage 우선)",
+      "5) uploaded_docs에서 doc_ingest.extractors로 관련 문장/용어 스니펫 추출",
+      "6) sections_order에 따라 텍스트 생성: 후킹(출처 간단 표기) → 핵심 인사이트(높/낮 양면, 업무 사례) → 적용(행동 팁 2~3개)",
+      "7) CTA 렌더링: cta_key가 있으면 해당, 없으면 가장 미래 날짜/마지막 키 사용",
+      "8) lint_checks 실행 → 수정 권고 반영",
+      "9) template_text에 렌더링하여 최종 출력"
+    ],
+    "apply_tips_library": [
+      "회의: '1차 익명 투표 → 2차 공개 토론'으로 집단 압력 완화",
+      "발언 프레임: 사실-영향-제안(SBI 변형) 구조로 표현",
+      "역할 분담: 데빌스 애드버킷(대안 관점 담당) 지정",
+      "면접: 구조화 질문 + 추가 탐색 질문 세트 준비",
+      "코칭: 목표 재정의(WHY→WHAT→HOW)와 체크리스트 도입"
+    ]
+  },
+
+  "lint_checks": [
+    {
+      "id": "order",
+      "desc": "섹션 순서가 '후킹→핵심 인사이트→적용→교육 안내'인지 확인",
+      "severity": "error"
+    },
+    {
+      "id": "length",
+      "desc": "총 단어 수가 style.length 범위 내인지 확인",
+      "severity": "warn"
+    },
+    {
+      "id": "cpi_link",
+      "desc": "CPI™ 인성검사 및 지정된 축 최소 1회 이상 명시",
+      "severity": "error"
+    },
+    {
+      "id": "two_sided",
+      "desc": "핵심 인사이트에서 높음/낮음 양면 설명 포함",
+      "severity": "error"
+    },
+    {
+      "id": "work_examples",
+      "desc": "업무 맥락 예시 2개 이상 포함",
+      "severity": "warn"
+    },
+    {
+      "id": "cta_block",
+      "desc": "CTA에 제목/일시/장소/대상/비용/혜택/할인 포함",
+      "severity": "error"
+    },
+    {
+      "id": "banned_phrases",
+      "desc": "과장 표현/금지 문구 사용 여부 점검",
+      "severity": "error"
+    },
+    {
+      "id": "exclamation_limit",
+      "desc": "감탄부호 사용 횟수 제한 준수",
+      "severity": "warn"
+    },
+    {
+      "id": "source_citation",
+      "desc": "후킹 단락에 간단한 출처(채널/사이트 + 연-월) 표기",
+      "severity": "warn"
+    }
+  ],
+
+  "safety_and_ethics": {
+    "copyright": "영상/이미지 재배포 금지, 텍스트 요약만 사용, 원저작자 채널/사이트 표기",
+    "privacy": "사생활 침해/미확인 루머 배제, 개인 식별 정보 비노출",
+    "bias": "특정 집단에 대한 차별/편견/고정관념 회피",
+    "medical_legal": "법률/의학적 확언 금지, 참고 수준으로만 언급",
+    "brand_safety": "부적절/선정/폭력적 콘텐츠 연결 금지"
+  },
+
+  "inputs_examples": [
+    {
+      "idea_free_text": "회의에서 다수에 휩쓸리는 심리를 예능 장면으로 훅",
+      "recipient": "정주영",
+      "cta_key": "2025-11",
+      "override": {
+        "force_linkage": ["대인 민감성"]
+      }
+    },
+    {
+      "idea_free_text": "챌린지 금욕 밈을 활용해 '자기통제'로 연결",
+      "recipient": "팀 리더",
+      "cta_key": "2025-09",
+      "override": {
+        "tone": { "emoji": false }
+      }
+    }
+  ],
+
+  "output_contract": {
+    "language": "ko",
+    "format": "markdown",
+    "contains_sections": ["후킹", "핵심 인사이트", "적용", "교육 안내"],
+    "tone": "존중체, 데이터 기반, 과장 배제",
+    "cta_required": true
+  }
+}
