@@ -1,0 +1,112 @@
+{
+  "version": "cpi-ruleset-2025-10-22",
+  "purpose": "CPI 홍보메일(뉴스레터/랜딩) 작성 시 일관된 메시지와 근거를 제공",
+  "about_cpi": "CPI™(California Psychological Inventory)는 일상 언어로 정의된 20개 일반척도와 3개 벡터척도를 중심으로, 개인의 행동·대인관계·가치·자기관리 특성을 실용적으로 해석하는 성격검사다. 총 문항수는 434문항이며(검사 소요 45~60분), 개방형 체계에서 실무 예측력에 초점을 둔 경험적(도구적) 개발 철학을 따른다. 국내 보고서 포맷은 일반 20 + 업무지향 7 + 타당도 3으로 ‘총 30개 척도’ 안내를 사용한다. :contentReference[oaicite:0]{index=0} :contentReference[oaicite:1]{index=1}",
+  "key_facts": [
+    "문항수 434, 일반척도 20 + 벡터 3(추가로 특수목적 13 존재) = 폭넓은 행동영역을 커버. :contentReference[oaicite:2]{index=2}",
+    "국내 결과 프로파일은 ‘총 30개’(일반 20, 업무지향 7, 타당도 3)로 안내한다. :contentReference[oaicite:3]{index=3}",
+    "검사 해석 흐름: ①타당도 확인 → ②유형(Alpha/Beta/Gamma/Delta)·만족감(Level 1~7) → ③20개 일반척도 세부 해석 → ④척도조합(패턴) 해석. :contentReference[oaicite:4]{index=4}",
+    "CPI는 ‘경험적 문항’을 섞어 응답 의도적 왜곡에 비교적 강하고, 보이는 모습보다 ‘실제 성향’을 포착하는 데 도움을 준다. :contentReference[oaicite:5]{index=5} :contentReference[oaicite:6]{index=6}",
+    "타당도 지수(긍정편향, 부정편향, 무작위응답)로 사회적 바람직성 편향/무성의 응답을 점검한다. 예: 긍정편향 높은 경우 ‘너무 좋은 사람’으로 보이려는 경향. :contentReference[oaicite:7]{index=7} :contentReference[oaicite:8]{index=8}",
+    "대표 활용: 채용·승진·배치의 조직적합성 판단, 리더십 개발·코칭·상담 등 개인 성장 지원. :contentReference[oaicite:9]{index=9}"
+  ],
+  "concepts": {
+    "vectors": {
+      "V1": "대인관여/표현성 연속(외향성↔내향성). 대인세계로의 참여 성향을 나타낸다. :contentReference[oaicite:10]{index=10}",
+      "V2": "규범지향 연속(규범 선호↔규범 의문/자율). 가치·규칙에 대한 기본 태도. :contentReference[oaicite:11]{index=11}",
+      "V3": "자기실현/심리적 유능감 연속(수준 1~7). 스트레스 대처·자기통합 수준의 지표. :contentReference[oaicite:12]{index=12}"
+    },
+    "lifestyles": {
+      "quadrants": "V1×V2로 4유형: ALPHA(실행형·규범/행동 중심), BETA(협력형·규범/사고 중심), GAMMA(혁신형·변화/행동 중심), DELTA(사색형·변화/사고 중심). 보고서에는 유형 점과 만족감 Level 시각화가 함께 제시된다(프로파일 p.4). :contentReference[oaicite:13]{index=13}",
+      "note": "Level(1~7)은 V3 기준 구간화로, 7일수록 자기실현/적응감이 높게 해석된다. :contentReference[oaicite:14]{index=14} :contentReference[oaicite:15]{index=15}"
+    },
+    "classes": [
+      "Class 01 대인관계 성향: 주도성·지위상승욕구·사교성·사회적 존재감·자기수용·독립성·공감성 등. ‘관계에서의 안정감·자신감·표현성’을 본다(프로파일 p.6). :contentReference[oaicite:16]{index=16}",
+      "Class 02 자기관리 성향: 자기통제 등 감정·충동 조절과 계획성(마시멜로/지연만족과 연결해 설명 가능). :contentReference[oaicite:17]{index=17} :contentReference[oaicite:18]{index=18}",
+      "Class 03 동기 및 사고방식: 성취 방식(규범 순응형/독립형)과 인지적 스타일. :contentReference[oaicite:19]{index=19} :contentReference[oaicite:20]{index=20}",
+      "Class 04 개인 특성/상황 대처: 대인 민감성 등 주변 상황을 대하는 태도(아쉬 동조실험 같은 사례 연결 가능). :contentReference[oaicite:21]{index=21} :contentReference[oaicite:22]{index=22}"
+    ],
+    "validity_indices": [
+      "긍정편향지수: ‘너무 좋은 사람’으로 보이려는 경향(사회적 바람직성). 보고서에서는 임계치 예시(예: 70↑)로 해석 주의 알림. :contentReference[oaicite:23]{index=23}",
+      "부정편향지수: ‘너무 안 좋은 사람’으로 보이려는 응답 경향. :contentReference[oaicite:24]{index=24}",
+      "무작위응답: 불성실/무성의 응답 여부(예: 30↓ 경고). :contentReference[oaicite:25]{index=25}"
+    ]
+  },
+  "report_flow": "해석 단계는 (1) 타당도 지수로 신뢰성 점검 → (2) 벡터/유형/만족감(Level) 파악 → (3) 20개 일반척도 강점·개발점·잠재요인 분류 → (4) 척도 조합(패턴)으로 맥락화. 프로파일 구성 안내(4파트) 및 절차는 보고서에 명시되어 있다. :contentReference[oaicite:26]{index=26}",
+  "numbers_to_quote": [
+    "434문항(예/아니오), 검사시간 약 45~60분. :contentReference[oaicite:27]{index=27}",
+    "총 30개 척도 안내(일반 20 + 업무지향 7 + 타당도 3). :contentReference[oaicite:28]{index=28}",
+    "유형 4(Alpha/Beta/Gamma/Delta), 만족감 Level 1~7. :contentReference[oaicite:29]{index=29}"
+  ],
+  "positioning": [
+    "조직: 채용·승진·배치에서 ‘조직/팀과의 결’·리더십 잠재력·협업 적합성 검토. :contentReference[oaicite:30]{index=30}",
+    "개인: 리더십/커리어 코칭, 자기이해·관계 개선, 감정·충동 조절 인사이트. :contentReference[oaicite:31]{index=31} :contentReference[oaicite:32]{index=32}"
+  ],
+  "safe_claims": [
+    "CPI는 임상진단 도구가 아니라 ‘일상적 행동·관계·가치’를 실용적으로 설명·예측하는 성격검사다. :contentReference[oaicite:33]{index=33}",
+    "타당도 지수로 응답 왜곡 가능성을 사전에 점검해 해석 신뢰도를 높인다. :contentReference[oaicite:34]{index=34} :contentReference[oaicite:35]{index=35}",
+    "경험적 문항 혼합으로 ‘의도적 인상관리’에 덜 흔들리도록 설계되었다. :contentReference[oaicite:36]{index=36} :contentReference[oaicite:37]{index=37}"
+  ],
+  "write_style": {
+    "tone": "따뜻·친근·근거기반. 과장 없이 ‘생활 속 사례 → CPI 관점 → 실무/일상 활용’ 흐름.",
+    "length": "본문 450~700자(섹션 합계).",
+    "structure": [
+      "① 제목/오프닝 훅(질문·숫자·실험/뉴스 각색)",
+      "② 오늘의 성장 포인트(핵심 2~3줄 불릿)",
+      "③ 마음에 씨 뿌리기(개념 설명/프로파일 요소 연결)",
+      "④ 마음에 물 주기(교육/도구 소개 & CTA)"
+    ],
+    "section_labels": "기존 메일의 고유 섹션명을 유지: ‘오늘의 성장 포인트’·‘마음에 씨 뿌리기’·‘마음에 물 주기’. :contentReference[oaicite:38]{index=38} :contentReference[oaicite:39]{index=39} :contentReference[oaicite:40]{index=40}",
+    "dos": [
+      "실험·연구(예: 마시멜로, 아쉬 동조)를 ‘일상 선택’으로 번역해 시작하기. :contentReference[oaicite:41]{index=41} :contentReference[oaicite:42]{index=42}",
+      "유형(Alpha~Delta)·Level·타당도 지수를 꼭 한 번은 언급해 ‘CPI만의 관점’을 부각. :contentReference[oaicite:43]{index=43}",
+      "조직/개인 활용 예를 한 줄로 연결(채용 조직적합성, 리더십 코칭 등). :contentReference[oaicite:44]{index=44}"
+    ],
+    "donts": [
+      "임상적·치료적 효능을 암시(‘우울증 진단/치유’ 등)하거나 결과를 보장형으로 표현하지 말 것. :contentReference[oaicite:45]{index=45}",
+      "타당도 임계값을 단정적 탈락 기준처럼 과도하게 쓰지 말 것(‘무조건 부적합’ 등). :contentReference[oaicite:46]{index=46}"
+    ]
+  },
+  "copy_blocks": {
+    "subject_templates": [
+      "어른이 된 우리는 마시멜로를 참을 수 있을까? (자기통제·자기관리) :contentReference[oaicite:47]{index=47}",
+      "모두가 YES라 할 때, 나는 왜 NO가 힘들까? (대인 민감성) :contentReference[oaicite:48]{index=48}",
+      "‘진짜’ 인성은 들킨다—경험적 문항이 드러내는 것 (타당도/경험문항) :contentReference[oaicite:49]{index=49}"
+    ],
+    "hook_templates": [
+      "회의에서 손 들기 직전, 이렇게 망설인 적 있나요?",
+      "지금의 편안함 vs. 다음 주의 여유, 당신의 선택은?",
+      "회사에서의 ‘나’와 일상 속 ‘나’, 얼마나 다를까요?"
+    ],
+    "bridge_lines": [
+      "CPI는 이런 순간의 ‘행동 선택’을 예측하는 단서들을 제공합니다. :contentReference[oaicite:50]{index=50}",
+      "보고서에는 유형(Alpha~Delta)과 만족감(Level 1~7)이 한눈에 제시됩니다. :contentReference[oaicite:51]{index=51}"
+    ],
+    "cta_templates": [
+      "👉 [CPI™ 인성검사 교육]으로 프로파일 해석과 적용을 한 번에.",
+      "👉 조직/팀 맞춤 CPI 프로파일로 ‘우리 조직의 결’을 빠르게 확인하세요. :contentReference[oaicite:52]{index=52}"
+    ]
+  },
+  "topic_starters": [
+    "대인관계 성향—주도성/공감성 밸런스",
+    "자기관리 성향—자기통제(지연만족)와 감정조절",
+    "동기·사고 방식—순응 성취 vs. 독립 성취",
+    "개인 특성—대인 민감성과 협업",
+    "타당도 지수—긍정/부정 왜곡, 무작위응답의 의미",
+    "조직적합성—‘우리 조직과 결이 맞는 인재’ 빠르게 보기"
+  ],
+  "faq_snippets": [
+    {
+      "q": "CPI 결과는 조작이 가능한가요?",
+      "a": "응답 왜곡을 점검하는 타당도 지수와 경험적 문항을 병행해, 인상관리로부터 비교적 자유롭게 해석되도록 설계되었습니다. :contentReference[oaicite:53]{index=53} :contentReference[oaicite:54]{index=54}"
+    },
+    {
+      "q": "임상 진단도 가능한가요?",
+      "a": "아니요. CPI는 일상적 행동과 사회적 기능을 ‘folk 개념’으로 설명·예측하는 도구이며, 임상진단 목적이 아닙니다. :contentReference[oaicite:55]{index=55}"
+    },
+    {
+      "q": "시간과 구성은?",
+      "a": "예/아니오 434문항, 약 45~60분. 보고서에는 타당도·유형/Level·일반척도·업무지향척도 등이 포함됩니다. :contentReference[oaicite:56]{index=56} :contentReference[oaicite:57]{index=57}"
+    }
+  ]
+}
